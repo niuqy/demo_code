@@ -4,3 +4,4 @@ gen/
 .project
 .settings/
 ic_launcher-web.png
+*.iml
