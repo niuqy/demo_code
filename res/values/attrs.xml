@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Custom_Attr_View"> //if the name is the same as the name of View that will use these attrs,the IDE will give
+                                                //you the hint of the attr
+        <attr name="astTitle" format="string" />
+        <attr name="astTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ArbitraryName">
+        <attr name="myAttrName" format="string" />
+    </declare-styleable>
+</resources>
