@@ -11,6 +11,6 @@ public class DemoAct extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.custom_view_demo_main);
+        setContentView(new MatricsDemoView(this));
     }
 }
