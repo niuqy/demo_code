@@ -7,7 +7,7 @@ import com.example.demoproject.R;
 /**
  * Created by abner on 5/19/15.
  */
-public class DemoAct extends Activity {
+public class MatricsDemoAct extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/fadeOut"
+            android:text="fade out"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/fadeIn"
+            android:text="fade in"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/moveOver"
+            android:text="move over"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/moveBack"
+            android:text="move back"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/rotate"
+            android:text="rotate"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:id="@+id/container">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/animBtn"
+                android:text="Animating Button"/>
+    </LinearLayout>
+</LinearLayout>

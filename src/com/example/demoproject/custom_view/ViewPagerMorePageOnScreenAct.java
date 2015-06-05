@@ -1,4 +1,4 @@
-package com.example.demoproject;
+package com.example.demoproject.custom_view;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import com.example.demoproject.R;
 
 public class ViewPagerMorePageOnScreenAct extends Activity{
 	 private int[] imgs = new int[]{R.drawable.city,R.drawable.land,R.drawable.sea,R.drawable.car,R.drawable.girl};

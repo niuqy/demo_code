@@ -1,10 +1,9 @@
-package com.example.demoproject;
+package com.example.demoproject.custom_view;
 
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
@@ -15,25 +14,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends ListActivity {
-    static String[] demoActivities = {
-            "com.example.demoproject.animation.AnimDemo"
-            ,"com.example.demoproject.custom_view.ViewDemoAct"
-            ,"com.example.demoproject.gesture.VelocityTrackerAct"
+/**
+ * Created by abner on 6/5/15.
+ */
+public class ViewDemoAct extends ListActivity {
+    static String[] activities = {
+            "blur.BlurTestAct"
+            ,"scroll_view.ScrollTestAct"
+            ,"Custom_Atrt_Act"
+            ,"MatricsDemoAct"
+            ,"ViewPagerMorePageOnScreenAct"
     };
     static List<Map<String,String>> data = new ArrayList<Map<String, String>>();
     static {
-        for(int i=0;i< demoActivities.length;i++){
+        for(int i=0;i<activities.length;i++){
             Map<String,String> map = new HashMap<String, String>();
-            map.put("activity", demoActivities[i]);
+            map.put("activity",activities[i]);
             data.add(map);
         }
     }
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         SimpleAdapter adapter = new SimpleAdapter(this,data,android.R.layout.simple_list_item_1,new String[]{"activity"},new int[]{android.R.id.text1});
         setListAdapter(adapter);
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -47,7 +49,7 @@ public class MainActivity extends ListActivity {
                 }
                 if(activity != null){
                     try {
-                        Intent it = new Intent(MainActivity.this,Class.forName(activity));
+                        Intent it = new Intent(ViewDemoAct.this,Class.forName("com.example.demoproject.custom_view." + activity));
                         adapterView.getContext().startActivity(it);
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
@@ -56,13 +58,5 @@ public class MainActivity extends ListActivity {
 
             }
         });
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
+    }
 }

@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".custom_view.DemoAct"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- animation -->
+        <activity android:name=".animation.Anim_Custom_LayoutTransiztion_ListViewAct"></activity>
+        <activity android:name=".animation.Anim_LayoutTransition_hideshow"></activity>
+        <activity android:name=".animation.Anim_Test_Icon_Test_Act"></activity>
+        <activity android:name=".animation.Animation_CloningAct"></activity>
+        <activity android:name=".animation.AnimationLoading"></activity>
+        <activity android:name=".animation.AnimMultiPropertiesAct"></activity>
+        <activity android:name=".animation.TranslationTest"></activity>
+        <activity android:name=".animation.ViewPropertyAnimatorTest"></activity>
+        <activity android:name=".animation.ListFliper"></activity>
+        <activity android:name=".animation.Custome_Evaluator"></activity>
+        <activity android:name=".animation.BouncingBalls"></activity>
+        <activity android:name=".animation.BasicTestAct"></activity>
+        <activity android:name=".animation.DrawableAnimAct"/>
+        <activity android:name=".animation.ViewAnimAct"/>
+        <activity android:name=".animation.AnimDemo"/>
+
+        <!-- custom view -->
+        <activity android:name=".custom_view.ViewDemoAct"/>
+        <activity android:name=".custom_view.blur.BlurTestAct"></activity>
+        <activity android:name=".custom_view.scroll_view.ScrollTestAct"/>
+        <activity android:name=".custom_view.Custom_Atrt_Act"/>
+        <activity android:name=".custom_view.MatricsDemoAct"/>
+        <activity android:name=".custom_view.ViewPagerMorePageOnScreenAct"/>
+
+        <!-- focus about key event on TV -->
+        <activity android:name=".focus_control_for_tv_key.FocusControl_Act"/>
+
+        <!-- gesture -->
+        <activity android:name=".gesture.VelocityTrackerAct"/>
     </application>
 
 </manifest>
