@@ -46,6 +46,7 @@
         <activity android:name=".custom_view.scroll_view.ScrollTestAct"/>
         <activity android:name=".custom_view.Custom_Atrt_Act"/>
         <activity android:name=".custom_view.MatricsDemoAct"/>
+        <activity android:name=".custom_view.MatricsAct2"/>
         <activity android:name=".custom_view.ViewPagerMorePageOnScreenAct"/>
 
         <!-- focus about key event on TV -->

@@ -23,6 +23,7 @@ public class ViewDemoAct extends ListActivity {
             ,"scroll_view.ScrollTestAct"
             ,"Custom_Atrt_Act"
             ,"MatricsDemoAct"
+            ,"MatricsAct2"
             ,"ViewPagerMorePageOnScreenAct"
     };
     static List<Map<String,String>> data = new ArrayList<Map<String, String>>();
