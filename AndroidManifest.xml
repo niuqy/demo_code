@@ -54,6 +54,9 @@
 
         <!-- gesture -->
         <activity android:name=".gesture.VelocityTrackerAct"/>
+
+        <provider android:authorities="com.example.demoproject.provider" android:name=".content_provider.MyContentProvider"/>
+        <activity android:name=".content_provider.ProviderTestAct"></activity>
     </application>
 
 </manifest>

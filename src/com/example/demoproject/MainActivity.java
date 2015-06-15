@@ -20,6 +20,7 @@ public class MainActivity extends ListActivity {
             "com.example.demoproject.animation.AnimDemo"
             ,"com.example.demoproject.custom_view.ViewDemoAct"
             ,"com.example.demoproject.gesture.VelocityTrackerAct"
+            ,"com.example.demoproject.content_provider.ProviderTestAct"
     };
     static List<Map<String,String>> data = new ArrayList<Map<String, String>>();
     static {
