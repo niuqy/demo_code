@@ -4,11 +4,12 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/ofFloat" android:text="ofFloat"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/animSet" android:text="Anim Set"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/anim_pvh" android:text="Anim Property value holder"/>
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+    <com.example.demoproject.animation.Anim_ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/demo" android:src="@drawable/ic_launcher"/>
 </LinearLayout>

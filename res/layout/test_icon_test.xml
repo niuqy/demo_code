@@ -12,7 +12,7 @@
               android:id="@+id/text"
               android:layout_marginLeft="50dp"/>
 
-    <com.example.myapp_test.view.Anim_ImageView
+    <com.example.demoproject.animation.Anim_ImageView
             android:id="@+id/icon"
             android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 

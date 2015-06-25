@@ -77,6 +77,7 @@ public class Anim_Test_Icon_Test_Act extends Activity implements Animator.Animat
             Log.d(TAG,"width:"+icon.getWidth()+",height:"+icon.getHeight());
             PropertyValuesHolder pvhWidth = PropertyValuesHolder.ofInt("width", icon.getWidth(), 0);
             PropertyValuesHolder pvhHeight = PropertyValuesHolder.ofInt("height", icon.getHeight(), 0);
+            ObjectAnimator widthHeightAnim = ObjectAnimator.ofPropertyValuesHolder(icon,pvhWidth,pvhHeight).setDuration(DURATION);
 
             Keyframe kf1 = Keyframe.ofFloat(0f,1f);
             Keyframe kf2 = Keyframe.ofFloat(.9999f,.8f);
