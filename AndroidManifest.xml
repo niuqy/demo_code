@@ -39,6 +39,7 @@
         <activity android:name=".animation.DrawableAnimAct"/>
         <activity android:name=".animation.ViewAnimAct"/>
         <activity android:name=".animation.AnimDemo"/>
+        <activity android:name=".animation.view_anim.SetAnimForActivityAct"/>
 
         <!-- custom view -->
         <activity android:name=".custom_view.ViewDemoAct"/>

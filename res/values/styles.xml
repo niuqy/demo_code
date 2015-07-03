@@ -17,4 +17,8 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="popup_anim_style_right_in_left_out">
+        <item name="android:windowEnterAnimation">@anim/right_slip_in</item>
+        <item name="android:windowExitAnimation">@anim/left_slip_out</item>
+    </style>
 </resources>

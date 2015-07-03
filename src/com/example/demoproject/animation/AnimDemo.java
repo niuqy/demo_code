@@ -30,8 +30,9 @@ public class AnimDemo extends ListActivity {
     ,"TranslationTest"
     ,"ViewPropertyAnimatorTest"
     ,"BasicTestAct"
-            ,"DrawableAnimAct"
-            ,"ViewAnimAct"
+    ,"DrawableAnimAct"
+    ,"ViewAnimAct"
+    ,"view_anim.SetAnimForActivityAct"
     };
     static List<Map<String,String>> data = new ArrayList<Map<String, String>>();
     static {
