@@ -25,6 +25,7 @@ public class ViewDemoAct extends ListActivity {
             ,"MatricsDemoAct"
             ,"MatricsAct2"
             ,"ViewPagerMorePageOnScreenAct"
+            ,"CustomCompositeAct"
     };
     static List<Map<String,String>> data = new ArrayList<Map<String, String>>();
     static {

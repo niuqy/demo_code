@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView android:layout_width="100dp" android:layout_height="100dp"
+            android:id="@+id/author_image"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_launcher"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/author_name"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp"
+            android:text="Jack"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/post_message"
+            android:paddingTop="5dp"
+            android:textSize="10sp"
+            android:text="I need to learn how to use custom view! I make a great progress today!"/>
+</merge>
