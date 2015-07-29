@@ -33,6 +33,7 @@ public class AnimDemo extends ListActivity {
     ,"DrawableAnimAct"
     ,"ViewAnimAct"
     ,"view_anim.SetAnimForActivityAct"
+    ,"view_anim.ViewAnimationUseAct"
     };
     static List<Map<String,String>> data = new ArrayList<Map<String, String>>();
     static {
