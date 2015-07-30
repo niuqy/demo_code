@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@drawable/sea"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="200dp" android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/leftView">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/item1"
+                    android:text="Item1"
+                    android:layout_alignParentLeft="true"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Item2"
+                    android:layout_below="@+id/item1"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:background="@android:color/holo_orange_dark"
+                    android:id="@+id/content">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/left"
+                android:text="Left"
+                android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

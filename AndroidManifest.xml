@@ -41,6 +41,7 @@
         <activity android:name=".animation.AnimDemo"/>
         <activity android:name=".animation.view_anim.SetAnimForActivityAct"/>
         <activity android:name=".animation.view_anim.ViewAnimationUseAct"/>
+        <activity android:name=".animation.property_anim.QQ5ImitateAct"/>
 
 
         <!-- custom view -->
