@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.animation.*;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -42,14 +43,14 @@ public class MainActivity extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String activity = null;
-                if(view instanceof TextView){
+                if (view instanceof TextView) {
                     TextView textView = (TextView) view;
-                    activity= (String) textView.getText();
+                    activity = (String) textView.getText();
                     Log.d("nqy", "activity:" + activity);
                 }
-                if(activity != null){
+                if (activity != null) {
                     try {
-                        Intent it = new Intent(MainActivity.this,Class.forName(activity));
+                        Intent it = new Intent(MainActivity.this, Class.forName(activity));
                         adapterView.getContext().startActivity(it);
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
@@ -58,6 +59,9 @@ public class MainActivity extends ListActivity {
 
             }
         });
+
+        //set animation for list view item
+        getListView().setLayoutAnimation(getListAnim());
 	}
 
 	@Override
@@ -66,5 +70,29 @@ public class MainActivity extends ListActivity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+
+    private LayoutAnimationController getListAnim() {
+        long duration = 500;
+        AnimationSet set = new AnimationSet(true);
+        Animation animation = new AlphaAnimation(0.0f, 1.0f);
+        animation.setDuration(duration);
+        set.addAnimation(animation);
+
+        //fly from top
+        animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f,
+                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
+                -1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+        animation.setDuration(duration);
+        set.addAnimation(animation);
+        //fly from right
+        animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 1.0f,
+                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
+                0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+        animation.setDuration(duration);
+        set.addAnimation(animation);
+        LayoutAnimationController controller = new LayoutAnimationController(
+                set, 0.2f);
+        return controller;
+    }
 
 }

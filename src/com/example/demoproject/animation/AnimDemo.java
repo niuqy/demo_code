@@ -1,5 +1,6 @@
 package com.example.demoproject.animation;
 
+import android.animation.*;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import java.util.Map;
  * Created by abner on 6/2/15.
  */
 public class AnimDemo extends ListActivity {
+    int screenWidth;
     static String[] activities = {
             "property_anim.QQ5ImitateAct"
             ,"property_anim.QQ5_SlideMenu_Act"
@@ -46,6 +48,9 @@ public class AnimDemo extends ListActivity {
             data.add(map);
         }
     }
+
+    private LayoutTransition layoutTransition;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,14 +60,14 @@ public class AnimDemo extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String activity = null;
-                if(view instanceof TextView){
+                if (view instanceof TextView) {
                     TextView textView = (TextView) view;
-                    activity= (String) textView.getText();
-                    Log.d("nqy","activity:"+activity);
+                    activity = (String) textView.getText();
+                    Log.d("nqy", "activity:" + activity);
                 }
-                if(activity != null){
+                if (activity != null) {
                     try {
-                        Intent it = new Intent(AnimDemo.this,Class.forName("com.example.demoproject.animation." + activity));
+                        Intent it = new Intent(AnimDemo.this, Class.forName("com.example.demoproject.animation." + activity));
                         adapterView.getContext().startActivity(it);
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
@@ -71,5 +76,17 @@ public class AnimDemo extends ListActivity {
 
             }
         });
+
+        screenWidth = getResources().getDisplayMetrics().widthPixels;
+
+        //LayoutTransition is not for the animation of children of ViewGroup,it is for other using
+        getListView().setLayoutTransition(getLayoutTransition());
+    }
+
+    public LayoutTransition getLayoutTransition() {
+        LayoutTransition layoutTransition = new LayoutTransition();
+        Animator appearingAnim = ObjectAnimator.ofFloat(null, "translationX", screenWidth * 1.0f, 0.0f);
+        layoutTransition.setAnimator(LayoutTransition.APPEARING,appearingAnim);
+        return layoutTransition;
     }
 }

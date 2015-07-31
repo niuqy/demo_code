@@ -172,6 +172,8 @@ public class XCSlideMenu extends HorizontalScrollView {
             float contentScale = 1.0f - 0.2f * scale;
 
             rightMenu.setAlpha(rightmMenuAlpha);
+            rightMenu.setPivotX(0);
+            rightMenu.setPivotY(rightMenu.getHeight()/2);
             rightMenu.setScaleX(rightMenuScale);
             rightMenu.setScaleY(rightMenuScale);
             rightMenu.setTranslationX(-rightMenuWidth * 0.2f * (1 - scale));
