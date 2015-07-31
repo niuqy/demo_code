@@ -22,6 +22,7 @@ public class AnimDemo extends ListActivity {
     int screenWidth;
     static String[] activities = {
             "property_anim.QQ5ImitateAct"
+            ,"property_anim.Five_Eight_LoadingView_Act"
             ,"property_anim.QQ5_SlideMenu_Act"
             ,"Anim_Custom_LayoutTransiztion_ListViewAct"
     ,"Anim_LayoutTransition_hideshow"

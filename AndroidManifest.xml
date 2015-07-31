@@ -43,6 +43,7 @@
         <activity android:name=".animation.view_anim.ViewAnimationUseAct"/>
         <activity android:name=".animation.property_anim.QQ5ImitateAct"/>
         <activity android:name=".animation.property_anim.QQ5_SlideMenu_Act"/>
+        <activity android:name=".animation.property_anim.Five_Eight_LoadingView_Act"/>
 
 
         <!-- custom view -->
