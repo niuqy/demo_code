@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+
+    <com.example.demoproject.animation.property_anim.XCSlideMenu
+            android:id="@+id/slideMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sea"
+            android:scrollbars="horizontal" >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+            <include layout="@layout/left_menu" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/car" >
+
+                <TextView
+                        android:id="@+id/btnSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:textColor="#FFF"
+                        android:layout_margin="10dp"
+                        android:text="切换菜单" />
+            </LinearLayout>
+
+            <include layout="@layout/left_menu" />
+        </LinearLayout>
+    </com.example.demoproject.animation.property_anim.XCSlideMenu>
+
+</RelativeLayout>

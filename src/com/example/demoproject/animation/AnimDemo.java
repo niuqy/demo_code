@@ -18,8 +18,9 @@ import java.util.Map;
  * Created by abner on 6/2/15.
  */
 public class AnimDemo extends ListActivity {
-    static String[] activities = {"" +
+    static String[] activities = {
             "property_anim.QQ5ImitateAct"
+            ,"property_anim.QQ5_SlideMenu_Act"
             ,"Anim_Custom_LayoutTransiztion_ListViewAct"
     ,"Anim_LayoutTransition_hideshow"
     ,"Anim_Test_Icon_Test_Act"

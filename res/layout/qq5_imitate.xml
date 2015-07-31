@@ -3,24 +3,36 @@
                 android:background="@drawable/sea"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <RelativeLayout android:layout_width="200dp" android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
             android:id="@+id/leftView">
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/test"
+                android:text="Test"
+                android:layout_alignParentLeft="true"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                       android:id="@+id/item1"
+                      android:textColor="@android:color/holo_red_light"
+                      android:textSize="20sp"
+                      android:layout_below="@+id/test"
                     android:text="Item1"
                     android:layout_alignParentLeft="true"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                   android:text="Item2"
+                      android:textColor="@android:color/holo_red_light"
+                      android:textSize="20sp"
                     android:layout_below="@+id/item1"/>
     </RelativeLayout>
+    <View android:layout_width="match_parent" android:layout_height="match_parent"
+          android:id="@+id/cover" android:alpha="1"
+          android:background="@android:color/black"/>
+
     <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
                     android:background="@android:color/holo_orange_dark"
+                    android:alpha="1"
                     android:id="@+id/content">
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:id="@+id/left"
                 android:text="Left"
                 android:layout_alignParentLeft="true"/>
     </RelativeLayout>
-
 </RelativeLayout>
