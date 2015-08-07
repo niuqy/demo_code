@@ -18,7 +18,8 @@ import java.util.Map;
 
 public class MainActivity extends ListActivity {
     static String[] demoActivities = {
-            "com.example.demoproject.animation.AnimDemo"
+            "com.example.demoproject.jnidemo.HelloJNIActivity"
+            ,"com.example.demoproject.animation.AnimDemo"
             ,"com.example.demoproject.custom_view.ViewDemoAct"
             ,"com.example.demoproject.gesture.VelocityTrackerAct"
             ,"com.example.demoproject.content_provider.ProviderTestAct"
