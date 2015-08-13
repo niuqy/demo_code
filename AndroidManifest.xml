@@ -69,6 +69,15 @@
         <!-- jni -->
         <activity android:name=".jnidemo.HelloJNIActivity"></activity>
 
+        <!-- service -->
+        <service android:name=".service_started_bound.MessengerService"
+                android:process="com.remote"/>
+        <service android:name=".service_started_bound.AIDLService"
+                 android:process="com.remote.aidl"/>
+        <activity android:name=".service_started_bound.ServiceDemo"/>
+        <activity android:name=".service_started_bound.MessengerAct"/>
+        <activity android:name=".service_started_bound.AIDLAct"/>
+
     </application>
 
 </manifest>

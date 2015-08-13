@@ -24,6 +24,7 @@ public class MainActivity extends ListActivity {
             ,"com.example.demoproject.gesture.VelocityTrackerAct"
             ,"com.example.demoproject.content_provider.ProviderTestAct"
             ,"com.example.demoproject.database.SaveRestoreBitmapAct"
+            ,"com.example.demoproject.service_started_bound.ServiceDemo"
     };
     static List<Map<String,String>> data = new ArrayList<Map<String, String>>();
     static {
