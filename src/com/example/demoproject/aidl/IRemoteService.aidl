@@ -1,5 +1,7 @@
 // IRemoteService.aidl
-package com.example.demoproject;
+package com.example.demoproject.aidl;
+
+import com.example.demoproject.service_started_bound.Person;
 
 // Declare any non-default types here with import statements
 
@@ -13,4 +15,8 @@ interface IRemoteService {
      */
     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
             double aDouble, String aString);
+
+    List<Person> getPerson();
+
+    void addPerson(in Person person);
 }

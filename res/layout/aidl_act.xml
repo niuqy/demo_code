@@ -11,4 +11,8 @@
             android:id="@+id/unbind" android:text="unBind"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/getPid" android:text="getPid"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/addPerson" android:text="addPerson"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/getPersons" android:text="getPersons"/>
 </LinearLayout>

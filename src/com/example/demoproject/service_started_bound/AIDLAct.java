@@ -11,8 +11,10 @@ import android.os.RemoteException;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.demoproject.IRemoteService;
 import com.example.demoproject.R;
+import com.example.demoproject.aidl.IRemoteService;
+
+import java.util.List;
 
 /**
  * Created by abner on 8/13/15.
@@ -32,6 +34,8 @@ public class AIDLAct extends Activity {
         findViewById(R.id.bind).setOnClickListener(bindClick);
         findViewById(R.id.unbind).setOnClickListener(unBindClick);
         findViewById(R.id.getPid).setOnClickListener(getClick);
+        findViewById(R.id.addPerson).setOnClickListener(addPerson);
+        findViewById(R.id.getPersons).setOnClickListener(getPersons);
 
         connection = new ServiceConnection() {
             @Override
@@ -43,7 +47,7 @@ public class AIDLAct extends Activity {
 
             @Override
             public void onServiceDisconnected(ComponentName componentName) {
-                Toast.makeText(AIDLAct.this, "onServiceDisconnected "+componentName,Toast.LENGTH_SHORT).show();
+                Toast.makeText(AIDLAct.this, "onServiceDisconnected " + componentName, Toast.LENGTH_SHORT).show();
                 mService = null;
             }
         };
@@ -65,6 +69,41 @@ public class AIDLAct extends Activity {
                 unbindService(connection);
                 isBound = false;
                 mCallBackText.setText("unbinding");
+            }
+        }
+    };
+
+    View.OnClickListener addPerson = new View.OnClickListener(){
+
+        @Override
+        public void onClick(View view) {
+            if(isBound){
+                try {
+                    Person p = new Person();
+                    p.age = 5;
+                    p.name = "Jim";
+                    mService.addPerson(p);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    };
+
+    View.OnClickListener getPersons = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View view) {
+            if(isBound){
+                try {
+                    List<Person> list = mService.getPerson();
+                    if(list != null && list.size() > 0){
+                        Person person = list.get(0);
+                        mCallBackText.setText(person.age+" "+person.name);
+                    }
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
             }
         }
     };
